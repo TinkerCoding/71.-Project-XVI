@@ -10,7 +10,7 @@ export function createTodo(data) {
          isCompleted: data.completed,
          category: data.chosenCategory,
          author: {
-             firstName; data.user.first,
+             firstName: data.user.first,
              lastName: data.user.last
           }
      };
