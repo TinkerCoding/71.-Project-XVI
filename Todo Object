@@ -1,0 +1,42 @@
+--- Without optional part ---
+/**
+ * @param {object} data
+ */
+export function createTodo(data) {
+    console.log(data); // helps you visualize the incoming object
+
+     return {
+         title: data.todoTitle,
+         isCompleted: data.completed,
+         category: data.chosenCategory,
+         author: {
+             firstName; data.user.first,
+             lastName: data.user.last
+          }
+     };
+}
+
+--- With optional part ---
+
+/**
+ * @param {object} data
+ */
+export function createTodo(data) {
+    console.log(data); // helps you visualize the incoming object
+
+    let icon = "----- timer image -----";
+    if (data.completed) {
+        icon = "----- tick-mark image -----";
+    }
+
+    return { 
+       title: data.todoTitle,
+       isCompleted: data.completed,
+       category: data.chosenCategory,
+       icon: icon,
+       author: {
+             firstName: data.user.first,
+             lastName: data.user.last
+        }
+    };
+}
